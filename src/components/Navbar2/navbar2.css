@@ -22,8 +22,16 @@ a {
   text-decoration: none;
 }
 
+.fixed {
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
 .menu {
   list-style-type: none;
+  z-index: 999;
 }
 
 .logo {
@@ -52,6 +60,7 @@ a {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+  
 }
 
 .menu li a {
@@ -72,19 +81,12 @@ a {
 .item {
   order: 3;
   width: 100%;
-  text-emphasis: center;
+  text-align: center;
   display: none;
+  
 }
 
-/* .item .active {
-  display: block;
-}
-
-.menu-toggle .active {
-  display: block;
-} */
-
-.active {
+.active .item {
   display: block;
 }
 

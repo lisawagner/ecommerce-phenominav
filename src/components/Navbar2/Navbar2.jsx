@@ -5,7 +5,8 @@ import {
   MdPersonOutline,
   MdOutlineFavoriteBorder,
   MdOutlineShoppingCart,
-  MdOutlineMenu
+  MdOutlineMenu,
+  MdClose
   } from 'react-icons/md'
 import './navbar2.css'
 
@@ -15,7 +16,7 @@ const Navbar2 = () => {
 
   return (
     <>
-    <nav>
+    <nav className='fixed'>
       {/* <ul className="menu"> */}
       <ul className={toggle ? "menu active" : "menu"}>
         <li className="logo"><Link to='/'>Phenomina.</Link></li>
@@ -29,9 +30,14 @@ const Navbar2 = () => {
         <li className="item button secondary"><Link to='/favourites'>favourites</Link></li>
         <li className="item button tertiary"><Link to='/cart'>cart</Link></li>
         <li className="menu-toggle" onClick={handleToggle}>
-          <Link to='/' >
+          {!toggle ? (
             <MdOutlineMenu />
-          </Link>
+          ) : (
+            <MdClose />
+          )}
+          {/* <Link to='/' >
+            <MdOutlineMenu />
+          </Link> */}
         </li>
       </ul>
     </nav>
