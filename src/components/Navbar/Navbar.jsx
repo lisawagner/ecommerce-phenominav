@@ -8,11 +8,13 @@ import {
   MdOutlineMenu
   } from 'react-icons/md'
 
+import './navbar.css'
+
 const Navbar = () => {
   return (
     <>
-      <h1>Navbar</h1>
-      {/* TOP-NAV */}
+    {/* TOP-NAV */}
+    <div className="site-navbar">
       <div className="top-nav">
         <div className="container">
           <div className="top-nav-row">
@@ -27,6 +29,7 @@ const Navbar = () => {
                 <Link to='/' className='brand-logo' >phenomina.</Link>
               </div>
             </div>
+            {/* START HERE SATURDAY !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */}
             <div className="icon-links-col">
               <div className="top-nav-icons">
                 <ul>
@@ -59,8 +62,10 @@ const Navbar = () => {
 
       </div>
 
-      {/* MAIN-NAV */}
-    
+    {/* MAIN-NAV */}
+    <div className="main-nav">main navigation</div>
+
+    </div> {/* end site-nav */}
     </>
 
   )
