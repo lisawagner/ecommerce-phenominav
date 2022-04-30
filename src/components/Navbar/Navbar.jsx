@@ -20,7 +20,7 @@ const Navbar = () => {
           <div className="top-nav-row">
             <div className="search-col">
               <form action="" className='top-search'>
-                <span><MdSearch /></span>
+                <span className='icon icon-search2' ><MdSearch /></span>
                 <input type="text" className='search-form-control' placeholder="find your happy" />
               </form>
             </div>
@@ -49,7 +49,7 @@ const Navbar = () => {
                     </Link> 
                   </li>
                   <li>
-                    <Link to='/' className='toggle-menu'>
+                    <Link to='/' className='toggle-menu d-none'>
                       <MdOutlineMenu />
                     </Link> 
                   </li>

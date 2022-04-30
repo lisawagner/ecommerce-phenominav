@@ -33,10 +33,23 @@
   text-align: left;
 }
 
-.top-search{
+.top-search {
   position: relative;
   display: block;
   margin-top: 0em;
+}
+.top-search .icon {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.top-search input {
+  padding-left: 40px;
+  transition: .3s all ease-in-out;
+}
+.top-search input:focus, .top-search input:active {
+  padding-left: 25px;
 }
 
 .brand-col {
@@ -58,13 +71,36 @@
   padding-left: 10px;
 }
 .icon-links-col {
-  text-align: right;
+  /* text-align: right; */
+  
+  /* position: relative;
+  width: 100%;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px; */
 }
 
 .top-nav-icons {
-  display: block;
+  /* display: block; */
   text-align: right;
+  margin-right: 1rem;
 }
+
+.top-nav-icons ul, .top-nav-icons ul li {
+  /* padding: 0; */
+  /* margin: 0; */
+  list-style: none;
+  /* color: teal */
+}
+
+.top-nav-icons ul li {
+  display: inline-block;
+}
+
+.top-nav-icons ul li a {
+  margin-right: 20px;
+}
+
 
 @media (min-width: 768px) {
   .top-nav {
@@ -85,6 +121,9 @@
     order: 3;
     flex: 0 0 33.33333%;
     max-width: 33.33333%;
+  }
+  .icon-links-col .d-none {
+    display: none;
   }
 }
 
