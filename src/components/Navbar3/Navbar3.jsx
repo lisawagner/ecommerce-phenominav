@@ -254,16 +254,16 @@ const Navbar3 = () => {
       {/* <MdOutlineMenu name="menu-outline" /> */}
     </button>
 
-    <button className="action-btn">
+    <button className="action-btn right">
       <MdOutlineHome name="home-outline" />
     </button>
 
-    <button className="action-btn">
+    <button className="action-btn right">
       <MdOutlineFavoriteBorder name="heart-outline" />
       <span className="count">0</span>
     </button>
 
-    <button className="action-btn">
+    <button className="action-btn right">
       <MdOutlineShoppingCart name="bag-handle-outline" />
       <span className="count">0</span>
     </button>
