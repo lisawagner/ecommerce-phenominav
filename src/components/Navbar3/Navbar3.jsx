@@ -13,14 +13,30 @@ import {
   MdClose,
   } from 'react-icons/md'
 
+import {
+  FaFacebookSquare,
+  FaTwitter,
+  FaInstagram,
+  FaTiktok,
+} from 'react-icons/fa'
+
 import './navbar3.css'
 
 const Navbar3 = () => {
   const [toggle, setToggle] = useState(false)
   const handleToggle = () => setToggle(!toggle)
 
-  const [dropdown, setDropdown] = useState(false)
-  const handleDropdown = () => setDropdown(!dropdown)
+  const [mens, setMens] = useState(false)
+  const handleMensToggle = () => setMens(!mens)
+
+  const [womens, setWomens] = useState(false)
+  const handleWomensToggle = () => setWomens(!womens)
+  
+  const [language, setLanguage] = useState(false)
+  const handleLanguageToggle = () => setLanguage(!language)
+
+  const [currency, setCurrency] = useState(false)
+  const handleCurrencyToggle = () => setCurrency(!currency)
 
   return (
     <>
@@ -33,22 +49,22 @@ const Navbar3 = () => {
       <ul className="header-social-container">
         <li>
           <a href="/" className="social-link">
-            <ion-icon name="logo-facebook"></ion-icon>
+            <FaFacebookSquare name="logo-facebook" />
           </a>
         </li>
         <li>
           <a href="/" className="social-link">
-            <ion-icon name="logo-twitter"></ion-icon>
+            <FaTwitter name="logo-twitter" />
           </a>
         </li>
         <li>
           <a href="/" className="social-link">
-            <ion-icon name="logo-instagram"></ion-icon>
+            <FaInstagram name="logo-instagram" />
           </a>
         </li>
         <li>
           <a href="/" className="social-link">
-            <ion-icon name="logo-linkedin"></ion-icon>
+            <FaTiktok name="logo-tiktok" />
           </a>
         </li>
       </ul>
@@ -107,7 +123,7 @@ const Navbar3 = () => {
         <li className="menu-category">
           <a href="/" className="menu-title">Home</a>
         </li>
-        <li className="menu-category">
+        {/* <li className="menu-category">
           <a href="/" className="menu-title">Categories</a>
           <div className="dropdown-panel">
 
@@ -169,7 +185,7 @@ const Navbar3 = () => {
             </ul>
 
           </div>
-        </li>
+        </li> */}
 
         <li className="menu-category">
           <a href="/" className="menu-title">Men's</a>
@@ -239,11 +255,6 @@ const Navbar3 = () => {
     </button>
 
     <button className="action-btn">
-      <MdOutlineShoppingCart name="bag-handle-outline" />
-      <span className="count">0</span>
-    </button>
-
-    <button className="action-btn">
       <MdOutlineHome name="home-outline" />
     </button>
 
@@ -252,9 +263,14 @@ const Navbar3 = () => {
       <span className="count">0</span>
     </button>
 
-    <button className="action-btn" data-mobile-menu-open-btn>
-      <MdGridView name="grid-outline" />
+    <button className="action-btn">
+      <MdOutlineShoppingCart name="bag-handle-outline" />
+      <span className="count">0</span>
     </button>
+
+    {/* <button className="action-btn" data-mobile-menu-open-btn>
+      <MdGridView name="grid-outline" />
+    </button> */}
 
   </div>
 
@@ -274,17 +290,20 @@ const Navbar3 = () => {
       </button>
     </div>
 
+
     <ul className="mobile-menu-category-list">
+    {/* pull out this component into 'DesktopTabs.jsx' */}
+
       <li className="menu-category"><a href="/" className="menu-title">Home</a></li>
       <li className="menu-category">
-        <button className={dropdown ? "accordion-menu active" : "accordion-menu" } onClick={handleDropdown}>
+        <button className={mens ? "accordion-menu active" : "accordion-menu" } onClick={handleMensToggle}>
           <p className="menu-title">Men's</p>
           <div>
             <MdOutlineKeyboardArrowDown name="add-outline" className="add-icon"/>
             <MdOutlineKeyboardArrowUp name="remove-outline" className="remove-icon" />
           </div>
         </button>
-        <ul className={dropdown ? "submenu-category-list active" : "submenu-category-list"}>
+        <ul className={mens ? "submenu-category-list active" : "submenu-category-list"}>
           <li className="submenu-category">
             <a href="/" className="submenu-title">Shirt</a>
           </li>
@@ -301,14 +320,14 @@ const Navbar3 = () => {
       </li>
 
       <li className="menu-category">
-        <button className={dropdown ? "accordion-menu active" : "accordion-menu" } onClick={handleDropdown}>
+        <button className={womens ? "accordion-menu active" : "accordion-menu" } onClick={handleWomensToggle}>
           <p className="menu-title">Women's</p>
           <div>
             <MdOutlineKeyboardArrowDown name="add-outline" className="add-icon"/>
             <MdOutlineKeyboardArrowUp name="remove-outline" className="remove-icon" />
           </div>
         </button>
-        <ul className={dropdown ? "submenu-category-list active" : "submenu-category-list"}>
+        <ul className={womens ? "submenu-category-list active" : "submenu-category-list"}>
           <li className="submenu-category">
             <a href="/" className="submenu-title">Dress + Frock</a>
           </li>
@@ -325,73 +344,32 @@ const Navbar3 = () => {
       </li>
 
       <li className="menu-category">
-        <button className="accordion-menu" data-accordion-btn>
-          <p className="menu-title">Jewelry</p>
-          <div>
-            <ion-icon name="add-outline" className="add-icon"></ion-icon>
-            <ion-icon name="remove-outline" className="remove-icon"></ion-icon>
-          </div>
-        </button>
-        <ul className="submenu-category-list" data-accordion>
-          <li className="submenu-category">
-            <a href="/" className="submenu-title">Earrings</a>
-          </li>
-          <li className="submenu-category">
-            <a href="/" className="submenu-title">Couple Rings</a>
-          </li>
-          <li className="submenu-category">
-            <a href="/" className="submenu-title">Necklace</a>
-          </li>
-          <li className="submenu-category">
-            <a href="/" className="submenu-title">Bracelets</a>
-          </li>
-        </ul>
-      </li>
-
-      <li className="menu-category">
-        <button className="accordion-menu" data-accordion-btn>
-          <p className="menu-title">Perfume</p>
-          <div>
-            <ion-icon name="add-outline" className="add-icon"></ion-icon>
-            <ion-icon name="remove-outline" className="remove-icon"></ion-icon>
-          </div>
-        </button>
-        <ul className="submenu-category-list" data-accordion>
-          <li className="submenu-category">
-            <a href="/" className="submenu-title">Clothes Perfume</a>
-          </li>
-          <li className="submenu-category">
-            <a href="/" className="submenu-title">Deodorant</a>
-          </li>
-          <li className="submenu-category">
-            <a href="/" className="submenu-title">Flower Fragrance</a>
-          </li>
-          <li className="submenu-category">
-            <a href="/" className="submenu-title">Air Freshener</a>
-          </li>
-        </ul>
-      </li>
-
-      <li className="menu-category">
-        <a href="/" className="menu-title">Blog</a>
-      </li>
-
-      <li className="menu-category">
         <a href="/" className="menu-title">Hot Offers</a>
       </li>
 
+      <li className="menu-category">
+        <a href="/" className="menu-title">Accessories</a>
+      </li>
+
+      <li className="menu-category">
+        <a href="/" className="menu-title">Contact</a>
+      </li>
+
     </ul>
-    {/* <!-- menu-bottom --> */}
+
+    {/* <!-- slide-in menu-bottom --> */}
     <div className="menu-bottom">
       <ul className="menu-category-list">
+
         <li className="menu-category">
 
-          <button className="accordion-menu" data-accordion-btn>
+          <button className={language ? "accordion-menu active" : "accordion-menu" } onClick={handleLanguageToggle}>
             <p className="menu-title">Language</p>
-            <ion-icon name="caret-back-outline" className="caret-back"></ion-icon>
+            <MdOutlineKeyboardArrowDown name="add-outline" className="add-icon"/>
+            <MdOutlineKeyboardArrowUp name="remove-outline" className="remove-icon" />
           </button>
 
-          <ul className="submenu-category-list" data-accordion>
+          <ul className={language ? "submenu-category-list active" : "submenu-category-list"}>
             <li className="submenu-category">
               <a href="/" className="submenu-title">English</a>
             </li>
@@ -406,13 +384,14 @@ const Navbar3 = () => {
         </li>
 
         <li className="menu-category">
-          <button className="accordion-menu" data-accordion-btn>
+          <button className={currency ? "accordion-menu active" : "accordion-menu" } onClick={handleCurrencyToggle}>
             <p className="menu-title">Currency</p>
-            <ion-icon name="caret-back-outline" className="caret-back"></ion-icon>
+            <MdOutlineKeyboardArrowDown name="add-outline" className="add-icon"/>
+            <MdOutlineKeyboardArrowUp name="remove-outline" className="remove-icon" />
           </button>
-          <ul className="submenu-category-list" data-accordion>
+          <ul className={currency ? "submenu-category-list active" : "submenu-category-list"}>
             <li className="submenu-category">
-              <a href="/" className="submenu-title">USD &dollar;</a>
+              <a href="/" className="submenu-title">USD $</a>
             </li>
             <li className="submenu-category">
               <a href="/" className="submenu-title">EUR &euro;</a>
@@ -422,25 +401,26 @@ const Navbar3 = () => {
 
       </ul>
 
+{/* refactor social icons into their own data model + separate component here */}
       <ul className="menu-social-container">
         <li>
           <a href="/" className="social-link">
-            <ion-icon name="logo-facebook"></ion-icon>
+            <FaFacebookSquare name="logo-facebook" />
           </a>
         </li>
         <li>
           <a href="/" className="social-link">
-            <ion-icon name="logo-twitter"></ion-icon>
+            <FaTwitter name="logo-twitter" />
           </a>
         </li>
         <li>
           <a href="/" className="social-link">
-            <ion-icon name="logo-instagram"></ion-icon>
+            <FaInstagram name="logo-instagram" />
           </a>
         </li>
         <li>
           <a href="/" className="social-link">
-            <ion-icon name="logo-linkedin"></ion-icon>
+            <FaTiktok name="logo-tiktok" />
           </a>
         </li>
       </ul>
