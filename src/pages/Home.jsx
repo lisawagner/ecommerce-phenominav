@@ -5,7 +5,7 @@ import './home.css'
 const Home = () => {
   return (
     <Layout>
-      <div className='mt-3' >
+      <div className='mt-2' >
         <h1>Main content</h1>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, nesciunt voluptatibus similique asperiores commodi quibusdam culpa odit repellat consectetur vero, praesentium labore! At optio asperiores sint, commodi natus accusantium consequatur autem quas corporis quis quam vel nulla reiciendis perspiciatis aspernatur inventore nemo? Maxime dignissimos dicta voluptate atque reiciendis magni minima.</p>
         <p>Dolor sit amet consectetur adipisicing elit. Quos maxime, labore cupiditate mollitia incidunt, ducimus minima ullam dolore est debitis totam. Blanditiis assumenda minima numquam mollitia velit earum est ea.</p>
