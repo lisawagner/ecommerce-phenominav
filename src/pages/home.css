@@ -2,3 +2,13 @@
 .mt-2 {
   margin-top: 2rem;
 }
+
+.main-content {
+  display: block;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  
+  padding: 0;
+  /* background-color: red; */
+}

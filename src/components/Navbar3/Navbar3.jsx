@@ -123,9 +123,9 @@ const Navbar3 = () => {
         <li className="menu-category">
           <a href="/" className="menu-title">Home</a>
         </li>
-        {/* <li className="menu-category">
+        <li className="menu-category">
           <a href="/" className="menu-title">Categories</a>
-          <div className="dropdown-panel">
+          {/* <div className="dropdown-panel">
 
             <ul className="dropdown-panel-list">
               <li className="menu-title"><a href="/">Electronics</a></li>
@@ -184,8 +184,8 @@ const Navbar3 = () => {
               </li>
             </ul>
 
-          </div>
-        </li> */}
+          </div> */}
+        </li>
 
         <li className="menu-category">
           <a href="/" className="menu-title">Men's</a>
