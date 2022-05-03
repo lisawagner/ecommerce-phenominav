@@ -89,7 +89,7 @@ const Navbar3 = () => {
     <div className="container">
 
       <a href="/" className="header-logo">
-        <span>Phenomina.</span>
+        <div className="flex-title">Phenomina</div>
         {/* <img src="" alt="Phenomina." width="120" height="36"/> */}
       </a>
       <div className="header-search-container">
@@ -254,19 +254,21 @@ const Navbar3 = () => {
       {/* <MdOutlineMenu name="menu-outline" /> */}
     </button>
 
-    <button className="action-btn right">
-      <MdOutlineHome name="home-outline" />
-    </button>
+    <div className="right">
+      <button className="action-btn">
+        <MdOutlineHome name="home-outline" />
+      </button>
 
-    <button className="action-btn right">
-      <MdOutlineFavoriteBorder name="heart-outline" />
-      <span className="count">0</span>
-    </button>
+      <button className="action-btn">
+        <MdOutlineFavoriteBorder name="heart-outline" />
+        <span className="count">0</span>
+      </button>
 
-    <button className="action-btn right">
-      <MdOutlineShoppingCart name="bag-handle-outline" />
-      <span className="count">0</span>
-    </button>
+      <button className="action-btn">
+        <MdOutlineShoppingCart name="bag-handle-outline" />
+        <span className="count">0</span>
+      </button>
+    </div>
 
     {/* <button className="action-btn" data-mobile-menu-open-btn>
       <MdGridView name="grid-outline" />
