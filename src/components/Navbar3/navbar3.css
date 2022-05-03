@@ -138,7 +138,9 @@ body::-webkit-scrollbar-thumb:hover { background: hsl(0, 0%, 70%); }
   border-bottom: 1px solid var(--cultured);
 }
 
-.header-logo {margin-bottom: 20px; }
+.header-logo {
+  margin-bottom: 20px;
+}
 
 /* .header-logo img { margin: auto; } */
 /* new */
@@ -146,6 +148,9 @@ body::-webkit-scrollbar-thumb:hover { background: hsl(0, 0%, 70%); }
   display: block;
   text-align: center;
   font-weight: 700;
+  /* color: hsl(0, 0%, 13%); */
+  color: teal;
+  text-transform: lowercase;
   /* --fs-1: 1.563rem; */
   font-size: var(--fs-1);
   letter-spacing: 2px;
@@ -466,6 +471,10 @@ body::-webkit-scrollbar-thumb:hover { background: hsl(0, 0%, 70%); }
   .container { max-width: 980px; }
 
   /* header */
+  .header-top {
+    margin-top: 0px;
+  }
+
   .header-social-container {
     display: flex;
     align-items: center;
