@@ -18,20 +18,18 @@ const GlobalStyles = createGlobalStyle`
     --cultured: hsl(0, 0%, 96%);
     --white: hsl(0, 100%, 100%);
 
-    /* new colors */
+    /* new colors - switch names to primary, etc.*/
 
-    --colour-greeny: teal;
-    /* #008080 */
-
-    --colour-orangy: coral;
+    --teal: hsl(180, 100%, 25%);
+    /* #008080 - teal */
+    --coral: hsl(16, 100%, 66%);
     /* #ff7f50 */
-
-    --colour-yellow: #FFFA69;
-
-    --colour-purple: #8F42FF;
-
-    --colour-blue: #008fc7;
-
+    --lazer-lemon: hsl(58, 100%, 71%);
+    /* #FFFA69 */
+    --blue-violet: hsl(264, 100%, 63%);
+    /* #8F42FF */
+    --powder-blue: hsl(197, 100%, 39%);
+    /* #008fc7 */
 
 
     /* old colors */

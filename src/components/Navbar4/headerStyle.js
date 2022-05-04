@@ -20,7 +20,7 @@ export const BrandLink = styled(Link)`
   display: block;
   text-align: center;
   font-weight: 700;
-  color: teal;
+  color: var(--teal);
   text-transform: lowercase;
   font-size: 2.5rem;
   letter-spacing: 2px;
