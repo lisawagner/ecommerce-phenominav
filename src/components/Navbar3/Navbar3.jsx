@@ -84,10 +84,13 @@ const Navbar3 = () => {
       </div>
     </div>
   </div>
+
+
+
   {/* header main */}
   <div className="header-main">
-    <div className="container">
 
+    <div className="container">
       <a href="/" className="header-logo">
         <div className="flex-title">Phenomina</div>
         {/* <img src="" alt="Phenomina." width="120" height="36"/> */}
@@ -115,6 +118,9 @@ const Navbar3 = () => {
     </div>
 
   </div>
+
+
+
   {/* <!-- desktop nav --> */}
   <nav className="desktop-navigation-menu">
 
