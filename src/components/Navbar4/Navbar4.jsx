@@ -1,8 +1,14 @@
 import React from 'react'
+import DesktopNav from './DesktopNav'
+import MobileNav from './MobileNav'
 
 const Navbar4 = () => {
   return (
-    <div>Navbar4</div>
+    <>
+    <h1>Navbar4</h1>
+    <DesktopNav />
+    <MobileNav />
+    </>
   )
 }
 
