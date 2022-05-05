@@ -14,11 +14,12 @@ import {
 import DesktopNav from './DesktopNav'
 import MobileNav from './MobileNav'
 import HeaderMain from './HeaderMain'
+import HeaderTop from './HeaderTop'
 
 const Header = () => {
   return (
     <>
-
+      <HeaderTop />
       <HeaderMain />
       <DesktopNav />
       <MobileNav />

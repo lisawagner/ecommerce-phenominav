@@ -6,7 +6,7 @@ import { DEVICE } from '../../constants/Breakpoints';
 // header-main (if it needs to be separate from container, or delete this)
 export const HeaderMainWrapper = styled.div`
   width: 100%;
-  background: pink;
+  /* background: pink; */
 
 
   @media ${DEVICE.tablet} {
@@ -64,6 +64,7 @@ export const SearchInput = styled.input.attrs({
   placeholder: 'Find your happy...'
 })`
   color: var(--onyx);
+  font-size: 0.875rem;
   padding: 10px 15px;
   padding-right: 50px;
   border: 1px solid var(--cultured);

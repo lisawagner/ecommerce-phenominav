@@ -10,8 +10,8 @@ import { HeaderMainWrapper, BrandLink, MainContainer, SearchBar, SearchInput, Se
 
 const HeaderMain = () => {
   return (
-    <><div>HeaderMain</div>
-    <HeaderMainWrapper>
+    <>
+      <HeaderMainWrapper>
         <MainContainer>
 
           <BrandLink to="/">Phenomina</BrandLink>

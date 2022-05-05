@@ -71,6 +71,7 @@ const Navbar3 = () => {
       <div className="header-alert-news">
         <p><b>Free Shipping</b>This Week Order Over - $55</p>
       </div>
+
       <div className="header-top-actions">
         <select name="currency">
           <option value="usd">USD $</option>
@@ -82,6 +83,7 @@ const Navbar3 = () => {
           <option value="fr">Fran&ccedil;ais</option>
         </select>
       </div>
+      
     </div>
   </div>
 
