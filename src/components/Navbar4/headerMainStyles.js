@@ -9,8 +9,6 @@ export const HeaderMainWrapper = styled.div`
   background: pink;
 
 
-
-
   @media ${DEVICE.tablet} {
     margin-top: 1rem;
   }

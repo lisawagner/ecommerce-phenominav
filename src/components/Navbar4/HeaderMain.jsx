@@ -1,10 +1,47 @@
 import React from 'react'
+import {
+  MdSearch,
+  MdPersonOutline,
+  MdOutlineFavoriteBorder,
+  MdOutlineShoppingCart,
+  } from 'react-icons/md'
 
 import { HeaderMainWrapper, BrandLink, MainContainer, SearchBar, SearchInput, SearchBtn, UserActionsWrap, ActionBtn, Count } from './headerMainStyles'
 
 const HeaderMain = () => {
   return (
-    <div>HeaderMain</div>
+    <><div>HeaderMain</div>
+    <HeaderMainWrapper>
+        <MainContainer>
+
+          <BrandLink to="/">Phenomina</BrandLink>
+
+          <SearchBar>
+            <SearchInput />
+            <SearchBtn>
+              <MdSearch />
+            </SearchBtn>
+          </SearchBar>
+
+          <UserActionsWrap>
+            <ActionBtn>
+              <MdPersonOutline />
+            </ActionBtn>
+            <ActionBtn>
+              <MdOutlineFavoriteBorder />
+              <Count>0</Count>
+            </ActionBtn>
+            <ActionBtn>
+              <MdOutlineShoppingCart />
+              <Count>0</Count>
+            </ActionBtn>
+          </UserActionsWrap>
+
+        </MainContainer>
+      </HeaderMainWrapper>
+    </>
+    
+
   )
 }
 

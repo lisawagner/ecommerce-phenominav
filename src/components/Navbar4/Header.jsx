@@ -14,43 +14,12 @@ import {
 import DesktopNav from './DesktopNav'
 import MobileNav from './MobileNav'
 import HeaderMain from './HeaderMain'
-import { HeaderMainWrapper, BrandLink, MainContainer, SearchBar, SearchInput, SearchBtn, UserActionsWrap, ActionBtn, Count } from './headerStyle'
 
 const Header = () => {
   return (
     <>
 
-<HeaderMain />
-      <HeaderMainWrapper>
-        <MainContainer>
-
-          <BrandLink to="/">Phenomina</BrandLink>
-
-          <SearchBar>
-            <SearchInput />
-            <SearchBtn>
-              <MdSearch />
-            </SearchBtn>
-          </SearchBar>
-
-          <UserActionsWrap>
-            <ActionBtn>
-              <MdPersonOutline />
-            </ActionBtn>
-            <ActionBtn>
-              <MdOutlineFavoriteBorder />
-              <Count>0</Count>
-            </ActionBtn>
-            <ActionBtn>
-              <MdOutlineShoppingCart />
-              <Count>0</Count>
-            </ActionBtn>
-          </UserActionsWrap>
-
-        </MainContainer>
-      </HeaderMainWrapper>
-      
-      
+      <HeaderMain />
       <DesktopNav />
       <MobileNav />
     </>
