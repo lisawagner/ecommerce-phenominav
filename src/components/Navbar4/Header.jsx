@@ -13,12 +13,15 @@ import {
 
 import DesktopNav from './DesktopNav'
 import MobileNav from './MobileNav'
-import { Wrapper, BrandLink, MainContainer, SearchBar, SearchInput, SearchBtn, UserActionsWrap, ActionBtn, Count } from './headerStyle'
+import HeaderMain from './HeaderMain'
+import { HeaderMainWrapper, BrandLink, MainContainer, SearchBar, SearchInput, SearchBtn, UserActionsWrap, ActionBtn, Count } from './headerStyle'
 
 const Header = () => {
   return (
     <>
-      <Wrapper>
+
+<HeaderMain />
+      <HeaderMainWrapper>
         <MainContainer>
 
           <BrandLink to="/">Phenomina</BrandLink>
@@ -45,7 +48,7 @@ const Header = () => {
           </UserActionsWrap>
 
         </MainContainer>
-      </Wrapper>
+      </HeaderMainWrapper>
       
       
       <DesktopNav />

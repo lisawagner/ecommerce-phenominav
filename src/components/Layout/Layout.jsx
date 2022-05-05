@@ -16,9 +16,9 @@ const Layout = ({children}) => {
       {/* <Navbar2 /> */}
       <Navbar3 />
       <Header />
-      <SampleNav />
+      {/* <SampleNav /> */}
       {/* <Dropdown /> */}
-      <Dropdowns />
+      {/* <Dropdowns /> */}
       {children}
       <Footer />
     </>
