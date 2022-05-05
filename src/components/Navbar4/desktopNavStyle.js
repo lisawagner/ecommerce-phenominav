@@ -19,7 +19,6 @@ export const DesktopNavWrap = styled.div`
 `
 
 
-// STYLEDUL ///
 //desktop-menu-category-list
 export const DesktopMenuList = styled.ul`
   position: relative;
@@ -31,13 +30,8 @@ export const DesktopMenuList = styled.ul`
 
 `
 
-// STYLEDLI ///
-//menu-category
-export const MenuItem = styled.li`
-    
-`
 
-// STYLEDA ///
+
 //menu-title |||||switch to react-router-dom Links
 export const MenuLink = styled.a`
   position: relative;
@@ -49,7 +43,8 @@ export const MenuLink = styled.a`
   transition: var(--transition-timing);
 
   &:hover {
-    color: var(--salmon-pink);
+    /* color: var(--salmon-pink); */
+    cursor: pointer;
   }
 
   &::after {
@@ -69,40 +64,46 @@ export const MenuLink = styled.a`
     transform: scaleX(1);
   }
 
-  /* when hover here, show DropdownList */
-
-
 
 `
-// DROPDOWNLI /////////
+
 // dropdown-list
 export const DropdownList = styled.ul`
-  /* position: absolute;
-  top: 100%;
-  left: 0;
+  /* display: none; */
+  transform: translateY(50px);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  position: absolute;
   width: 200px;
   background: var(--white);
   padding: 20px 0;
   border-radius: var(--border-radius-md);
   border: 1px solid var(--cultured);
-  box-shadow: 0 3px 5px hsla(0, 0%, 0%, 0.1); */
+  box-shadow: 0 3px 5px hsla(0, 0%, 0%, 0.1);
 
-  /* ||||||||||||||||||  HERE ||||||||||||||||||||||||| */
-  /* transform: translateY(50px);
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none; */
-
-  /* transition: var(--transition-timing);
-  z-index: 5; */
-  display: none;
+  transition: var(--transition-timing);
+  z-index: 5;
 `
+//menu-category
+export const MenuItem = styled.li`
+    /* position: relative;
+    display: inline-block; */
 
+    &:hover ${DropdownList} {
+      /* display: block; */
+      transform: translateY(0);
+      opacity: 1;
+      visibility: visible;
+      pointer-events: all;
+    }
+`
 
 //dropdown-item
 export const DropdownItem = styled.li`
+  font-size: 0.875rem;
   &:hover {
-    background: red;
+    /* background: grey; */
   }
 `
 
@@ -112,11 +113,10 @@ export const TempLink = styled.a`
   /* font-size: var(--fs-7); */
   text-transform: capitalize;
   padding: 4px 20px;
-  /* transition: var(--transition-timing); */
+  transition: var(--transition-timing);
 
   &:hover {
     color: var(--salmon-pink);
+    cursor: pointer;
   }
-
-
 `
