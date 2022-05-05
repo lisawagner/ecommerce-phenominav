@@ -38,16 +38,19 @@ const GlobalStyles = createGlobalStyle`
     --bittersweet: hsl(0, 100%, 70%);
     --ocean-green: hsl(152, 51%, 52%);
 
+    /* styles */
+  --border-radius-md: 10px;
+  --border-radius-sm: 5px;
+
+  --transition-timing: 0.2s ease;
+
   }
 
   body {
-    /* margin: 0;
     padding: 0;
-    height: 100%; */
-    margin: 0px;
-    width: 100vw;
-    height: 100vh;
+    margin: 0;
     overflow: auto;
+    box-sizing: border-box;
     font-family: 'Urbanist', sans-serif, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;

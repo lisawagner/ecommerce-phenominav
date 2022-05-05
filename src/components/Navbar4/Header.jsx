@@ -1,22 +1,52 @@
 import React from 'react'
-// import { Link } from 'react-router-dom'
-// import styled from 'styled-components'
+import {
+  MdSearch,
+  // MdOutlineHome,
+  MdPersonOutline,
+  MdOutlineFavoriteBorder,
+  // MdOutlineKeyboardArrowDown,
+  // MdOutlineKeyboardArrowUp,
+  MdOutlineShoppingCart,
+  // MdOutlineMenu,
+  // MdClose,
+  } from 'react-icons/md'
 
 import DesktopNav from './DesktopNav'
 import MobileNav from './MobileNav'
-import { Wrapper, BrandLink, MainContainer, SearchBar } from './headerStyle'
+import { Wrapper, BrandLink, MainContainer, SearchBar, SearchInput, SearchBtn, UserActionsWrap, ActionBtn, Count } from './headerStyle'
 
 const Header = () => {
   return (
     <>
       <Wrapper>
         <MainContainer>
+
           <BrandLink to="/">Phenomina</BrandLink>
+
           <SearchBar>
-            
+            <SearchInput />
+            <SearchBtn>
+              <MdSearch />
+            </SearchBtn>
           </SearchBar>
+
+          <UserActionsWrap>
+            <ActionBtn>
+              <MdPersonOutline />
+            </ActionBtn>
+            <ActionBtn>
+              <MdOutlineFavoriteBorder />
+              <Count>0</Count>
+            </ActionBtn>
+            <ActionBtn>
+              <MdOutlineShoppingCart />
+              <Count>0</Count>
+            </ActionBtn>
+          </UserActionsWrap>
+
         </MainContainer>
       </Wrapper>
+      
       
       <DesktopNav />
       <MobileNav />
