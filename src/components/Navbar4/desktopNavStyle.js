@@ -18,6 +18,8 @@ export const DesktopNavWrap = styled.div`
   /* margin: auto */
 `
 
+
+// STYLEDUL ///
 //desktop-menu-category-list
 export const DesktopMenuList = styled.ul`
   position: relative;
@@ -25,48 +27,57 @@ export const DesktopMenuList = styled.ul`
   justify-content: center;
   align-items: center;
   gap: 30px;
+
+
 `
 
+// STYLEDLI ///
 //menu-category
 export const MenuItem = styled.li`
-  
+    
 `
 
+// STYLEDA ///
 //menu-title |||||switch to react-router-dom Links
 export const MenuLink = styled.a`
   position: relative;
-    color: var(--onyx);
-    font-size: var(--fs-7);
-    font-weight: var(--weight-600);
-    text-transform: uppercase;
-    padding: 15px 0;
+  color: var(--onyx);
+  font-size: var(--fs-7);
+  font-weight: var(--weight-600);
+  text-transform: uppercase;
+  padding: 15px 0;
+  transition: var(--transition-timing);
+
+  &:hover {
+    color: var(--salmon-pink);
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--salmon-pink);
+    transform: scaleX(0);
+    transform-origin: left;
     transition: var(--transition-timing);
+  }
 
-    &:hover {
-      color: var(--salmon-pink);
-    }
+  &:hover::after {
+    transform: scaleX(1);
+  }
 
-    &::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: 2px;
-      background: var(--salmon-pink);
-      transform: scaleX(0);
-      transform-origin: left;
-      transition: var(--transition-timing);
-    }
+  /* when hover here, show DropdownList */
 
-    &:hover::after {
-      transform: scaleX(1);
-    }
+
+
 `
-
+// DROPDOWNLI /////////
 // dropdown-list
 export const DropdownList = styled.ul`
-  position: absolute;
+  /* position: absolute;
   top: 100%;
   left: 0;
   width: 200px;
@@ -74,21 +85,26 @@ export const DropdownList = styled.ul`
   padding: 20px 0;
   border-radius: var(--border-radius-md);
   border: 1px solid var(--cultured);
-  box-shadow: 0 3px 5px hsla(0, 0%, 0%, 0.1);
+  box-shadow: 0 3px 5px hsla(0, 0%, 0%, 0.1); */
 
   /* ||||||||||||||||||  HERE ||||||||||||||||||||||||| */
-  transform: translateY(50px);
+  /* transform: translateY(50px);
   opacity: 0;
   visibility: hidden;
-  pointer-events: none;
+  pointer-events: none; */
 
-
-  transition: var(--transition-timing);
-  z-index: 5;
+  /* transition: var(--transition-timing);
+  z-index: 5; */
+  display: none;
 `
 
+
 //dropdown-item
-export const DropdownItem = styled.li``
+export const DropdownItem = styled.li`
+  &:hover {
+    background: red;
+  }
+`
 
 //no className here, need to switch to rrd Link
 export const TempLink = styled.a`
@@ -101,4 +117,6 @@ export const TempLink = styled.a`
   &:hover {
     color: var(--salmon-pink);
   }
+
+
 `
