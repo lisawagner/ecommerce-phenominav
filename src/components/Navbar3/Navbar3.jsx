@@ -83,7 +83,7 @@ const Navbar3 = () => {
           <option value="fr">Fran&ccedil;ais</option>
         </select>
       </div>
-      
+
     </div>
   </div>
 
@@ -258,8 +258,6 @@ const Navbar3 = () => {
           ) : (
             <MdClose />
           )}
-
-      {/* <MdOutlineMenu name="menu-outline" /> */}
     </button>
 
     <div className="right">
@@ -289,10 +287,12 @@ const Navbar3 = () => {
   {/* className={toggle ? "menu active" : "menu"} */}
 
   {/* <nav className="mobile-navigation-menu  has-scrollbar" data-mobile-menu> */}
+
   <nav className={toggle ?
     "mobile-navigation-menu  has-scrollbar active" :
     "mobile-navigation-menu  has-scrollbar"
   } data-mobile-menu>
+    
     <div className="menu-top">
       <h2 className="menu-title">Menu</h2>
       <button className="menu-close-btn" onClick={handleToggle} data-mobile-menu-close-btn>
