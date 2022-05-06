@@ -17,18 +17,31 @@ import {
 import { MobileNavWrap, ActionBtn, UserActions, CountStyle } from './mobileNavStyles'
 
 
-const MobileNav = () => {
-  const [toggle, setToggle] = useState(false)
-  const handleToggle = () => setToggle(!toggle)
+const MobileNav = ( ) => {
+  // const [toggle, setToggle] = useState(false)
+  // const handleToggle = () => setToggle(!toggle)
+
+  // slidenav 
+  const [click, setClick] = useState(false);
+  const handleClick = () => setClick(!click);
 
   return (
     <>
     <h1>MobileNav</h1>
-    <MobileNavWrap>
+    <MobileNavWrap clicked={click}>
 
-      <ActionBtn onClick={handleToggle} >
+      {/* <ActionBtn onClick={handleToggle}  >
         {!toggle ? (<MdOutlineMenu name="menu-outline" />) : (<MdClose name="menu-close" />)}
+      </ActionBtn> */}
+
+      <ActionBtn onClick={handleClick}  >
+        <MdOutlineMenu name="menu-outline" />
       </ActionBtn>
+
+      {/* <ActionBtn onClick={handleToggle} >
+        {!isOpen ? (<MdOutlineMenu name="menu-outline" />) : (<MdClose name="menu-close" />)}
+      </ActionBtn> */}
+
 
       <UserActions>
         <ActionBtn><MdOutlineHome name="home-outline" /></ActionBtn>
@@ -43,7 +56,7 @@ const MobileNav = () => {
 
       </UserActions>
     </MobileNavWrap>
-    <SlideNav />
+    <SlideNav click={click} handleClick={handleClick} />
 
     </>
   )

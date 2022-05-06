@@ -15,29 +15,26 @@ import {
 
 import { MobileNavigationMenu, SlideNavTop, SlideNavTitle, CloseNavBtn, MobileMenu, MenuCategory, MenuTitle } from './slideNavStyles'
 
-const SlideNav = () => {
-  const [toggle, setToggle] = useState(false)
-  const handleToggle = () => setToggle(!toggle)
+const SlideNav = ({click, handleClick}) => {
+  // const [toggle, setToggle] = useState(false)
 
-  const [isOpen, setIsOpen] = useState(false)
+  // const [click, setClick] = useState(false);
+  // const handleClick = () => setClick(!click);
 
   return (
     <>
       <div>SlideNav</div>
-      <MobileNavigationMenu>
+      <MobileNavigationMenu clicked={click} >
 
         <SlideNavTop>
           <SlideNavTitle>Menu</SlideNavTitle>
-          {/* <CloseNavBtn onClick={handleToggle} >
-            <MdClose name="close-outline" />
-          </CloseNavBtn> */}
-          <CloseNavBtn onClick={ () => setIsOpen(!isOpen) } >
-            <MdClose name="close-outline" />
+          <CloseNavBtn onClick={handleClick} >
+            <MdClose  name="close-outline" />
           </CloseNavBtn>
         </SlideNavTop>
 
-        <MobileMenu>
-          <MenuCategory>
+        <MobileMenu clicked={click} >
+          <MenuCategory >
             <MenuTitle>Home</MenuTitle>
           </MenuCategory>
           <MenuCategory>

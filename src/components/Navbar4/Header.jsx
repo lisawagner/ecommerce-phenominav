@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import {
   MdSearch,
   // MdOutlineHome,
@@ -17,6 +17,7 @@ import HeaderMain from './HeaderMain'
 import HeaderTop from './HeaderTop'
 
 const Header = () => {
+
   return (
     <>
       <HeaderTop />

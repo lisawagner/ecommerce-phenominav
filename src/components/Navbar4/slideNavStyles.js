@@ -7,22 +7,23 @@ import { DEVICE } from '../../constants/Breakpoints';
 // top area //
 
 export const MobileNavigationMenu = styled.nav`
-  /* background: var(--white);
+  background: var(--white);
   position: fixed;
-  top: 0; */
-
-  /* left: -100%; */
-  /* width: 100%; */
-  /* max-width: 320px; */
-  
+  top: 0;
+  width: 100%;
+  left: ${ (props) => (props.clicked ? "0" : "-100%" ) };
   height: 100vh;
   padding: 20px;
   box-shadow: 0 0 10px hsla(0, 0%, 0%, 0.1);
   overflow-y: scroll;
   overscroll-behavior: contain;
-  /* visibility: hidden; */
+
   transition: 0.5s ease;
   z-index: 20;
+
+  @media ${DEVICE.tablet} {
+    width: 50%;
+  }
 `
 
 export const SlideNavTop = styled.div``
