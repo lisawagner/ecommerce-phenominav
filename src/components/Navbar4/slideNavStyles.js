@@ -15,8 +15,8 @@ export const MobileNavigationMenu = styled.nav`
   height: 100vh;
   padding: 20px;
   box-shadow: 0 0 10px hsla(0, 0%, 0%, 0.1);
-  overflow-y: scroll;
-  overscroll-behavior: contain;
+  /* overflow-y: scroll;
+  overscroll-behavior: contain; */
 
   transition: 0.5s ease;
   z-index: 20;
@@ -26,21 +26,45 @@ export const MobileNavigationMenu = styled.nav`
   }
 `
 
-export const SlideNavTop = styled.div``
+export const SlideNavTop = styled.div`
+  padding-bottom: 15px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid var(--cultured);
+`
 
-export const SlideNavTitle = styled.h2``
+export const SlideNavTitle = styled.h2`
+  color: var(--salmon-pink);
+  /* font-size: var(--fs-4); */
+  font-weight: 600;
+`
 
-export const CloseNavBtn = styled.button``
+export const CloseNavBtn = styled.button`
+  color: var(--eerie-black);
+  font-size: 22px;
+`
 
 // menu area //
 //mobile-menu-category-list
-export const MobileMenu = styled.ul``
+export const MobileMenu = styled.ul`
+  margin-bottom: 30px;
+`
 
 // menu-category
-export const MenuCategory = styled.li``
+export const MenuCategory = styled.li`
+  border-bottom: 1px solid var(--cultured);
+`
 
 // menu-title
-export const MenuTitle = styled.p``
+export const MenuTitle = styled.a`
+  color: var(--onyx);
+  font-size: 1rem;
+  /* font-size: var(--fs-6); */
+  font-weight: 400;
+  padding: 12px 0;
+`
 
 
 // social icons //

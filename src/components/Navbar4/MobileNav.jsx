@@ -22,7 +22,7 @@ const MobileNav = ( ) => {
   // const handleToggle = () => setToggle(!toggle)
 
   // slidenav 
-  const [click, setClick] = useState(false);
+  const [click, setClick] = useState(null);
   const handleClick = () => setClick(!click);
 
   return (

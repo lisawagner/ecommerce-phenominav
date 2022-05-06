@@ -1,106 +1,136 @@
 export const NAVLINKS = [
   {
+    id: "01",
     name: "Home",
     url: "/"
     // submenu: [{}]
   },
   {
+    id: "02",
     name: "Collections",
     url: "/collections",
     submenu: [
       {
-        name: "Essentials 2022"
+        name: "Essentials 2022",
+        url: "/collections"
       },
       {
-        name: "Couture Cafe"
+        name: "Couture Cafe",
+        url: "/collections"
       },
       {
-        name: "Pandemica"
+        name: "Pandemica",
+        url: "/collections"
       },
       {
-        name: "Apoc"
+        name: "Apoc",
+        url: "/collections"
       },
     ]
   },
   {
+    id: "03",
     name: "Clothing",
     url: "/products",
     submenu: [
       {
-        name: "Tops"
+        name: "Tops",
+        url: "/cart"
       },
       {
-        name: "Pants"
+        name: "Pants",
+        url: "/cart"
       },
       {
-        name: "Sweaters"
+        name: "Sweaters",
+        url: "/cart"
       },
       {
-        name: "Coats + Jackets"
+        name: "Coats + Jackets",
+        url: "/cart"
       },
       {
-        name: "Dresses"
+        name: "Dresses",
+        url: "/cart"
       },
       {
-        name: "Shirts"
+        name: "Shirts",
+        url: "/cart"
       },
       {
-        name: "Skirts"
+        name: "Skirts",
+        url: "/cart"
       },
     ]
   },
   {
+    id: "04",
     name: "Accessories",
     url: "/products",
     submenu: [
       {
-        name: "Bags"
+        name: "Bags",
+        url: "/products"
       },
       {
-        name: "Hats"
+        name: "Hats",
+        url: "/products"
       },
       {
-        name: "Belts"
+        name: "Belts",
+        url: "/products"
       },
       {
-        name: "Scarves"
+        name: "Scarves",
+        url: "/products"
       },
       {
-        name: "Jewelry"
+        name: "Jewelry",
+        url: "/products"
       },
       {
-        name: "Watches"
+        name: "Watches",
+        url: "/products"
       },
       {
-        name: "Wallets"
+        name: "Wallets",
+        url: "/products"
       },
       {
-        name: "Shoes"
+        name: "Shoes",
+        url: "/products"
       },
       {
-        name: "Socks"
+        name: "Socks",
+        url: "/products"
       },
     ]
   },
   {
+    id: "05",
     name: "Phenomina",
     url: "/phenomina",
     submenu: [
       {
-        name: "Storybook"
+        name: "Storybook",
+        url: "/phenomina"
       },
       {
-        name: "The World of Phenomia"
+        name: "The World of Phenomia",
+        url: "/phenomina"
       },
       {
-        name: "Circle of Life"
+        name: "Circle of Life",
+        url: "/phenomina"
       },
       {
-        name: "Manifesto"
+        name: "Manifesto",
+        url: "/phenomina"
       },
     ]
   },
   {
+    id: "06",
     name: "Contact",
     url: "#contact",
     // submenu: [{}]

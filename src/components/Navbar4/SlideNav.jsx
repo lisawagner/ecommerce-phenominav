@@ -1,28 +1,29 @@
 import React, { useState } from 'react'
+import { Link } from "react-router-dom";
+// import Accordion from './Accordion'
+import SubMenu from './SubMenu'
+import { NAVLINKS } from '../../models/navlinks'
 
 import {
-  MdSearch,
-  MdOutlineHome,
-  MdPersonOutline,
-  MdOutlineFavoriteBorder,
-  MdOutlineKeyboardArrowDown,
-  MdOutlineKeyboardArrowUp,
-  MdOutlineShoppingCart,
-  MdOutlineMenu,
-  MdGridView,
+  // MdSearch,
+  // MdOutlineHome,
+  // MdPersonOutline,
+  // MdOutlineFavoriteBorder,
+  // MdOutlineKeyboardArrowDown,
+  // MdOutlineKeyboardArrowUp,
+  // MdOutlineShoppingCart,
+  // MdOutlineMenu,
+  // MdGridView,
   MdClose,
   } from 'react-icons/md'
 
 import { MobileNavigationMenu, SlideNavTop, SlideNavTitle, CloseNavBtn, MobileMenu, MenuCategory, MenuTitle } from './slideNavStyles'
 
 const SlideNav = ({click, handleClick}) => {
-  // const [toggle, setToggle] = useState(false)
-
-  // const [click, setClick] = useState(false);
-  // const handleClick = () => setClick(!click);
 
   return (
     <>
+    
       <div>SlideNav</div>
       <MobileNavigationMenu clicked={click} >
 
@@ -33,15 +34,42 @@ const SlideNav = ({click, handleClick}) => {
           </CloseNavBtn>
         </SlideNavTop>
 
+        {/* <SubMenu /> */}
+
+        {NAVLINKS.map((item, index) => {
+          return <SubMenu item={item} key={index} />
+        })}
+
+        {/* {NAVLINKS.map(({name, url}, index) => {
+          return (
+              <Accordion key={index} title={name} description={url} />
+          )
+        })} */}
+
         <MobileMenu clicked={click} >
           <MenuCategory >
-            <MenuTitle>Home</MenuTitle>
+            <MenuTitle href="/" >Home</MenuTitle>
+          </MenuCategory>
+
+          <MenuCategory>
+            <MenuTitle href="/cart" >Collections</MenuTitle>
+          </MenuCategory>
+
+          <MenuCategory>
+            <MenuTitle href="/" >Clothing</MenuTitle>
           </MenuCategory>
           <MenuCategory>
-            <MenuTitle>Collections</MenuTitle>
+            <MenuTitle href="/" >Accessories</MenuTitle>
+          </MenuCategory>
+          <MenuCategory>
+            <MenuTitle href="/" >Phenomina</MenuTitle>
+          </MenuCategory>
+          <MenuCategory>
+            <MenuTitle href="/" >Contact</MenuTitle>
           </MenuCategory>
         </MobileMenu>
 
+      
 
       </MobileNavigationMenu>
     </>
