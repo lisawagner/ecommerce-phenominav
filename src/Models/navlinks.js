@@ -1,14 +1,24 @@
+import {
+  MdAdd,
+  MdRemove,
+  } from 'react-icons/md'
+
+
 export const NAVLINKS = [
   {
     id: "01",
     name: "Home",
-    url: "/"
+    url: "/",
+    iconClose: <MdRemove />,
+    iconOpen: <MdAdd />
     // submenu: [{}]
   },
   {
     id: "02",
     name: "Collections",
-    url: "/collections",
+    url: "/favourites",
+    iconClose: <MdRemove />,
+    iconOpen: <MdAdd />,
     submenu: [
       {
         name: "Essentials 2022",
@@ -32,6 +42,8 @@ export const NAVLINKS = [
     id: "03",
     name: "Clothing",
     url: "/products",
+    iconClose: <MdRemove />,
+    iconOpen: <MdAdd />,
     submenu: [
       {
         name: "Tops",
@@ -67,6 +79,8 @@ export const NAVLINKS = [
     id: "04",
     name: "Accessories",
     url: "/products",
+    iconClose: <MdRemove />,
+    iconOpen: <MdAdd />,
     submenu: [
       {
         name: "Bags",
@@ -110,6 +124,8 @@ export const NAVLINKS = [
     id: "05",
     name: "Phenomina",
     url: "/phenomina",
+    iconClose: <MdRemove />,
+    iconOpen: <MdAdd />,
     submenu: [
       {
         name: "Storybook",
@@ -133,6 +149,8 @@ export const NAVLINKS = [
     id: "06",
     name: "Contact",
     url: "#contact",
+    iconClose: <MdRemove />,
+    iconOpen: <MdAdd />
     // submenu: [{}]
   },
 ]

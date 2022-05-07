@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { Link } from 'react-router-dom'
 
 import { DEVICE } from '../../constants/Breakpoints';
 
@@ -15,8 +14,8 @@ export const MobileNavigationMenu = styled.nav`
   height: 100vh;
   padding: 20px;
   box-shadow: 0 0 10px hsla(0, 0%, 0%, 0.1);
-  /* overflow-y: scroll;
-  overscroll-behavior: contain; */
+  overflow-y: scroll;
+  overscroll-behavior: contain;
 
   transition: 0.5s ease;
   z-index: 20;

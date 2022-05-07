@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
-import { Link } from "react-router-dom";
 // import Accordion from './Accordion'
-import SubMenu from './SubMenu'
+// import SubMenu from './SubMenu'
 import { NAVLINKS } from '../../models/navlinks'
 
 import {
@@ -18,6 +17,7 @@ import {
   } from 'react-icons/md'
 
 import { MobileNavigationMenu, SlideNavTop, SlideNavTitle, CloseNavBtn, MobileMenu, MenuCategory, MenuTitle } from './slideNavStyles'
+import Dropdown from './Dropdown';
 
 const SlideNav = ({click, handleClick}) => {
 
@@ -36,15 +36,20 @@ const SlideNav = ({click, handleClick}) => {
 
         {/* <SubMenu /> */}
 
-        {NAVLINKS.map((item, index) => {
+        {/* {NAVLINKS.map((item, index) => {
           return <SubMenu item={item} key={index} />
-        })}
+        })} */}
 
         {/* {NAVLINKS.map(({name, url}, index) => {
           return (
               <Accordion key={index} title={name} description={url} />
           )
         })} */}
+
+        <h3>Dropdown</h3>
+        {NAVLINKS.map( (item, index) => {
+          return <Dropdown item={item} key={index} />
+        } )}
 
         <MobileMenu clicked={click} >
           <MenuCategory >

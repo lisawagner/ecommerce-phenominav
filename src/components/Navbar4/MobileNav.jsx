@@ -2,16 +2,16 @@ import React, { useState } from 'react'
 import SlideNav from './SlideNav'
 
 import {
-  MdSearch,
+  // MdSearch,
   MdOutlineHome,
-  MdPersonOutline,
+  // MdPersonOutline,
   MdOutlineFavoriteBorder,
-  MdOutlineKeyboardArrowDown,
-  MdOutlineKeyboardArrowUp,
+  // MdOutlineKeyboardArrowDown,
+  // MdOutlineKeyboardArrowUp,
   MdOutlineShoppingCart,
   MdOutlineMenu,
-  MdGridView,
-  MdClose,
+  // MdGridView,
+  // MdClose,
   } from 'react-icons/md'
 
 import { MobileNavWrap, ActionBtn, UserActions, CountStyle } from './mobileNavStyles'
@@ -22,7 +22,7 @@ const MobileNav = ( ) => {
   // const handleToggle = () => setToggle(!toggle)
 
   // slidenav 
-  const [click, setClick] = useState(null);
+  const [click, setClick] = useState(false);
   const handleClick = () => setClick(!click);
 
   return (
