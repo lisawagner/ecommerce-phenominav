@@ -27,7 +27,6 @@ const MobileNav = ( ) => {
 
   return (
     <>
-    <h1>MobileNav</h1>
     <MobileNavWrap clicked={click}>
 
       {/* <ActionBtn onClick={handleToggle}  >

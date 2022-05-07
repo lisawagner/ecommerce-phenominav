@@ -1,30 +1,23 @@
-import React, { useState } from 'react'
-// import Accordion from './Accordion'
-// import SubMenu from './SubMenu'
+import React from 'react'
+
 import { NAVLINKS } from '../../models/navlinks'
+import { MdClose } from 'react-icons/md'
+import Dropdown from './Dropdown';
 
 import {
-  // MdSearch,
-  // MdOutlineHome,
-  // MdPersonOutline,
-  // MdOutlineFavoriteBorder,
-  // MdOutlineKeyboardArrowDown,
-  // MdOutlineKeyboardArrowUp,
-  // MdOutlineShoppingCart,
-  // MdOutlineMenu,
-  // MdGridView,
-  MdClose,
-  } from 'react-icons/md'
+  MobileNavigationMenu,
+  SlideNavTop,
+  SlideNavTitle,
+  CloseNavBtn,
+  MobileMenu,
+  MenuCategory
+} from './slideNavStyles'
 
-import { MobileNavigationMenu, SlideNavTop, SlideNavTitle, CloseNavBtn, MobileMenu, MenuCategory, MenuTitle } from './slideNavStyles'
-import Dropdown from './Dropdown';
 
 const SlideNav = ({click, handleClick}) => {
 
   return (
-    <>
-    
-      <div>SlideNav</div>
+    <>  
       <MobileNavigationMenu clicked={click} >
 
         <SlideNavTop>
@@ -34,52 +27,16 @@ const SlideNav = ({click, handleClick}) => {
           </CloseNavBtn>
         </SlideNavTop>
 
-        {/* <SubMenu /> */}
-
-        {/* {NAVLINKS.map((item, index) => {
-          return <SubMenu item={item} key={index} />
-        })} */}
-
-        {/* <p>Accordion</p>
-        {NAVLINKS.map(({name, url}, index) => {
-          return (
-              <Accordion key={index} title={name} description={url} />
-          )
-        })} */}
-
-        <h3>Dropdown</h3>
-        <div onClick={handleClick} >
-        {NAVLINKS.map( (item, index) => {
-          return <Dropdown item={item} key={index} />
-        } )}
-        </div>
-        
-
         <MobileMenu>
-          <MenuCategory >
-            <MenuTitle href="/" >Home</MenuTitle>
-          </MenuCategory>
-
-          <MenuCategory>
-            <MenuTitle href="/cart" >Collections</MenuTitle>
-          </MenuCategory>
-
-          <MenuCategory>
-            <MenuTitle href="/" >Clothing</MenuTitle>
-          </MenuCategory>
-          <MenuCategory>
-            <MenuTitle href="/" >Accessories</MenuTitle>
-          </MenuCategory>
-          <MenuCategory>
-            <MenuTitle href="/" >Phenomina</MenuTitle>
-          </MenuCategory>
-          <MenuCategory>
-            <MenuTitle href="/" >Contact</MenuTitle>
-          </MenuCategory>
+        {NAVLINKS.map( (item, index) => {
+          return (
+            <MenuCategory >
+              <Dropdown item={item} key={index} click={click} handleClick={handleClick}/>
+            </MenuCategory>
+          )
+        })}
         </MobileMenu>
-
       
-
       </MobileNavigationMenu>
     </>
   )

@@ -46,17 +46,62 @@ const GlobalStyles = createGlobalStyle`
 
   }
 
-  body {
-    padding: 0;
+  /* Styles */
+  *, *::before, *::after {
     margin: 0;
-    overflow: auto;
+    padding: 0;
     box-sizing: border-box;
+  }
+
+  a { text-decoration: none; }
+
+  li { list-style: none; }
+
+  button {
+    background: none;
+    font: inherit;
+    border: none;
+    cursor: pointer;
+  }
+
+  img, button, a { display: block; }
+
+  html {
+    overscroll-behavior: contain;
+  }
+
+  input {
+    display: block;
+    width: 100%;
+    font: inherit;
+  }
+
+  input::placeholder { font: inherit; }
+
+  body {
+    background: var(--white);
     font-family: 'Urbanist', sans-serif, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
+
+  /* Scrollbar */
+  body::-webkit-scrollbar { width: 15px; }
+
+  body::-webkit-scrollbar-track {
+    background: var(--white);
+    border-left: 1px solid var(--cultured);
+  }
+
+  body::-webkit-scrollbar-thumb {
+    background: hsl(0, 0%, 80%);
+    border: 3px solid var(--white);
+    border-radius: 10px;
+  }
+
+  body::-webkit-scrollbar-thumb:hover { background: hsl(0, 0%, 70%); }
 `
 
 export default GlobalStyles;

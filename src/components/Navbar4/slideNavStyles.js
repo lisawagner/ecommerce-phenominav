@@ -56,14 +56,4 @@ export const MenuCategory = styled.li`
   border-bottom: 1px solid var(--cultured);
 `
 
-// menu-title
-export const MenuTitle = styled.a`
-  color: var(--onyx);
-  font-size: 1rem;
-  /* font-size: var(--fs-6); */
-  font-weight: 400;
-  padding: 12px 0;
-`
-
-
 // social icons //

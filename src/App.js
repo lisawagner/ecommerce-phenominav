@@ -15,14 +15,14 @@ function App() {
 
   return (
     <Router>
-      <Layout />
+      <Layout>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/login" element={<Login />} />
         <Route path="/favourites" element={<Favourites />} />
       </Routes>
-      {/* </Layout> */}
+      </Layout>
     </Router>
   );
 }
