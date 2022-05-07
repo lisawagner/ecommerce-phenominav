@@ -48,11 +48,14 @@ const SlideNav = ({click, handleClick}) => {
         })} */}
 
         <h3>Dropdown</h3>
+        <div onClick={handleClick} >
         {NAVLINKS.map( (item, index) => {
           return <Dropdown item={item} key={index} />
         } )}
+        </div>
+        
 
-        <MobileMenu clicked={click} >
+        <MobileMenu>
           <MenuCategory >
             <MenuTitle href="/" >Home</MenuTitle>
           </MenuCategory>

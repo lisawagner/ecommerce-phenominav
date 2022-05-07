@@ -4,7 +4,6 @@ import { SidebarLink, DropdownLink, SidebarLabel } from './dropdownStyles'
 
 const Dropdown = ( { item } ) => {
   const [subnav, setSubnav] = useState(false)
-
   const showSubnav = () => setSubnav(!subnav)
 
   return (
@@ -16,7 +15,7 @@ const Dropdown = ( { item } ) => {
           <SidebarLabel>{item.name}</SidebarLabel>
         </div>
         <div>
-          {item.submenu && subnav ? item.iconOpen : item.submenu ? item.iconClose : null}
+          {item.submenu && subnav ? item.iconClose : item.submenu ? item.iconOpen : null}
         </div>
       </SidebarLink>
         {subnav && item.submenu.map((item, index) => {

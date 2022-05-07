@@ -10,6 +10,7 @@ import SampleNav from '../SampleNav/SampleNav'
 // import Navbar2 from '../Navbar2/Navbar2'
 
 const Layout = ({children}) => {
+
   return (
     <>
       {/* <Navbar /> */}

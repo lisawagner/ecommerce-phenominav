@@ -1,4 +1,3 @@
-
 import './App.css';
 import Home from './pages/Home';
 import Cart from './pages/Cart'
@@ -13,6 +12,7 @@ import {
 import Layout from './components/Layout/Layout';
 
 function App() {
+
   return (
     <Router>
       <Layout />
