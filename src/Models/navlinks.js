@@ -122,26 +122,26 @@ export const NAVLINKS = [
   },
   {
     id: "05",
-    name: "Phenomina",
-    url: "/phenomina",
+    name: "Essence of Phenomena",
+    url: "/phenomena",
     iconClose: <MdRemove />,
     iconOpen: <MdAdd />,
     submenu: [
       {
         name: "Storybook",
-        url: "/phenomina"
+        url: "/phenomena"
       },
       {
-        name: "The World of Phenomia",
-        url: "/phenomina"
+        name: "The World of Phenomena",
+        url: "/phenomena"
       },
       {
         name: "Circle of Life",
-        url: "/phenomina"
+        url: "/phenomena"
       },
       {
         name: "Manifesto",
-        url: "/phenomina"
+        url: "/phenomena"
       },
     ]
   },

@@ -21,7 +21,7 @@ const SlideNav = ({click, handleClick}) => {
       <MobileNavigationMenu clicked={click} >
 
         <SlideNavTop>
-          <SlideNavTitle>Menu</SlideNavTitle>
+          <SlideNavTitle>phenomena</SlideNavTitle>
           <CloseNavBtn onClick={handleClick} >
             <MdClose  name="close-outline" />
           </CloseNavBtn>

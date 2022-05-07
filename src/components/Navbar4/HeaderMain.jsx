@@ -14,7 +14,7 @@ const HeaderMain = () => {
       <HeaderMainWrapper>
         <MainContainer>
 
-          <BrandLink to="/">Phenomina</BrandLink>
+          <BrandLink to="/">Phenomena</BrandLink>
 
           <SearchBar>
             <SearchInput />
