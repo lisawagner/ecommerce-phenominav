@@ -40,7 +40,8 @@ const SlideNav = ({click, handleClick}) => {
           return <SubMenu item={item} key={index} />
         })} */}
 
-        {/* {NAVLINKS.map(({name, url}, index) => {
+        {/* <p>Accordion</p>
+        {NAVLINKS.map(({name, url}, index) => {
           return (
               <Accordion key={index} title={name} description={url} />
           )

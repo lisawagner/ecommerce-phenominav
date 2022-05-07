@@ -9,7 +9,7 @@ export const MobileNavigationMenu = styled.nav`
   background: var(--white);
   position: fixed;
   top: 0;
-  width: 100%;
+  width: 70%;
   left: ${ (props) => (props.clicked ? "0" : "-100%" ) };
   height: 100vh;
   padding: 20px;
