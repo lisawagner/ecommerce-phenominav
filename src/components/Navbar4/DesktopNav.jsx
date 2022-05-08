@@ -1,5 +1,9 @@
 import React from 'react'
+import { NAVLINKS } from '../../models/navlinks'
+import MenuItems from './MenuItems'
+
 import { DesktopNavigation, DesktopNavWrap, DesktopMenuList, MenuItem, MenuLink, DropdownList, DropdownItem, TempLink } from './desktopNavStyle'
+
 
 const DesktopNav = () => {
   return (
@@ -7,6 +11,16 @@ const DesktopNav = () => {
       <DesktopNavigation>
 
         <DesktopNavWrap>
+          <DesktopMenuList>
+            {NAVLINKS.map( (item, index) => {
+              const depthLevel = 0;
+              return <MenuItems items={item} key={index} depthLevel={depthLevel} />
+            } )}
+          </DesktopMenuList>
+        </DesktopNavWrap>
+
+
+        {/* <DesktopNavWrap>
           <DesktopMenuList>
             
             <MenuItem>
@@ -85,7 +99,7 @@ const DesktopNav = () => {
             </MenuItem>
 
           </DesktopMenuList>
-        </DesktopNavWrap>
+        </DesktopNavWrap> */}
 
       </DesktopNavigation>
     </>
