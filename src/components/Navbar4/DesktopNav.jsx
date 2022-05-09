@@ -2,7 +2,7 @@ import React from 'react'
 import { NAVLINKS } from '../../models/navlinks'
 import MenuItems from './MenuItems'
 
-import { DesktopNavigation, DesktopNavWrap, DesktopMenuList, MenuItem, MenuLink, DropdownList, DropdownItem, TempLink } from './desktopNavStyle'
+import { DesktopNavigation, DesktopNavWrap, DesktopMenuList, MenuLink, DropdownList, DropdownItem, TempLink } from './desktopNavStyle'
 
 
 const DesktopNav = () => {

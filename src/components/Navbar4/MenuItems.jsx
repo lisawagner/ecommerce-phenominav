@@ -1,8 +1,7 @@
 import { useState, useEffect, useRef } from 'react'
 import DesktopDropdown from './DesktopDropdown'
 
-import './menuitems.css'
-import { MenuItem, MenuLink, DropdownList, DropdownItem, TempLink } from './desktopNavStyle'
+import { MenuLink, TempLink } from './desktopNavStyle'
 
 const MenuItems = ({ items, depthLevel }) => {
 const [dropdown, setDropdown] = useState(false)
@@ -18,7 +17,7 @@ useEffect(() => {
   document.addEventListener("mousedown", handler);
   document.addEventListener("touchstart", handler);
   return () => {
-    // Cleanup the event listener
+    // Cleanup event listeners
     document.removeEventListener("mousedown", handler);
     document.removeEventListener("touchstart", handler);
   };
@@ -33,8 +32,7 @@ const onMouseLeave = () => {
 };
 
   return (
-    // <div>MenuItems</div>
-    <MenuItem  
+    <div  
       ref={ref}
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
@@ -42,28 +40,29 @@ const onMouseLeave = () => {
       {items.submenu ? (
         <>
           <MenuLink
+            href={items.url}
             type="button"
             aria-haspopup="menu"
             aria-expanded={dropdown ? "true" : "false"}
             onClick={() => setDropdown((prev) => !prev)}
           >
-            <a href="/#">{items.name}</a>
-            {/* {items.name} */}
-            {/* {depthLevel > 0 ? <span>&raquo;</span> : <span className="arrow" />} */}
+            {/* <a href="/#">{items.name}</a> */}
+            {items.name}
           </MenuLink>
         
           <DesktopDropdown
-          depthLevel={depthLevel}
-          submenus={items.submenu}
-          dropdown={dropdown}
-          />
-          
+            depthLevel={depthLevel}
+            submenus={items.submenu}
+            dropdown = {dropdown}
+          />  
         </>
       ) : (
-        <div><a href="/#">{items.name}</a></div>
+        <div>
+          {depthLevel > 0 ? <TempLink href={items.url} >{items.title}</TempLink> : <MenuLink href={items.url} >{items.name}</MenuLink>}
+        </div>
         
       )}
-    </MenuItem>
+    </div>
   )
 }
 
